@@ -64,7 +64,7 @@ DTransactions transactions = degiro.getTransactions(c, c2);
 // Search products by text, signature:
 // DProductSearch searchProducts(String text, DProductType type, int limit, int offset);
 DProductSearch ps = degiro.searchProducts("telepizza", DProductType.ALL, 10, 0);
-for (DProduct product : ps.getProducts()) {
+for (DProductDescription product : ps.getProducts()) {
     System.out.println(product.getId() + " " + product.getName());
 }
 
